@@ -1,13 +1,322 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Hasan Mia | Professional SQA Specialist Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Fonts */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Custom Scrollbar (optional) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4F46E5; /* Indigo */
+            border-radius: 4px;
+        }
+        /* Fade-in animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body>
-    <h1>HI</h1>
-    <h2>Hello</h2>
-    <p>..... </p>
+<body class="bg-gray-100 text-gray-800 antialiased">
+
+    <header id="navbar" class="sticky top-0 bg-white bg-opacity-95 backdrop-blur-sm shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-3xl font-extrabold text-indigo-600 hover:text-indigo-800 transition duration-300">
+                &lt;Hasan Mia /&gt;
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#hero" class="nav-link text-lg font-medium text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="#about" class="nav-link text-lg font-medium text-gray-700 hover:text-indigo-600">About SQA</a>
+                <a href="#skills" class="nav-link text-lg font-medium text-gray-700 hover:text-indigo-600">Expertise</a>
+                <a href="#experience" class="nav-link text-lg font-medium text-gray-700 hover:text-indigo-600">Case Studies</a>
+                <a href="#contact" class="nav-link text-lg font-medium text-gray-700 hover:text-indigo-600">Contact</a>
+            </nav>
+            <button id="menu-button" class="md:hidden text-gray-700 hover:text-indigo-600 focus:outline-none p-2 rounded-md hover:bg-gray-100">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner pb-2">
+            <a href="#hero" class="nav-link block px-6 py-3 text-gray-700 hover:bg-indigo-50 font-medium">Home</a>
+            <a href="#about" class="nav-link block px-6 py-3 text-gray-700 hover:bg-indigo-50 font-medium">About SQA</a>
+            <a href="#skills" class="nav-link block px-6 py-3 text-gray-700 hover:bg-indigo-50 font-medium">Expertise</a>
+            <a href="#experience" class="nav-link block px-6 py-3 text-gray-700 hover:bg-indigo-50 font-medium">Case Studies</a>
+            <a href="#contact" class="nav-link block px-6 py-3 text-gray-700 hover:bg-indigo-50 font-medium">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <section id="hero" class="fade-in-section pt-32 pb-24 md:pt-48 md:pb-32 flex flex-col items-center justify-center text-center bg-white rounded-xl shadow-2xl border-t-4 border-indigo-600 min-h-screen-75 relative overflow-hidden mt-8">
+            <div class="relative max-w-5xl z-10 p-4">
+                <div class="w-40 h-40 rounded-full mx-auto mb-8 bg-indigo-100 flex items-center justify-center overflow-hidden border-4 border-indigo-600 shadow-2xl">
+                    <img src="./assets/images/hasan_mia_profile.jpg" alt="Hasan Mia Profile Photo" class="w-full h-full object-cover">
+                </div>
+                
+                <p class="text-xl md:text-2xl font-semibold text-gray-600 mb-3">Hello, I'm</p>
+                <h1 class="text-6xl md:text-8xl font-extrabold text-gray-900 mb-6 leading-tight">
+                    Hasan Mia
+                </h1>
+                <p class="text-3xl md:text-4xl font-extrabold text-indigo-700 mb-10 tracking-wide">
+                    Software Quality Assurance (SQA) Specialist
+                </p>
+                <p class="text-lg md:text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Dedicated to ensuring robust software quality through comprehensive **Manual and Automated Testing**. I transform high-risk features into flawless user experiences.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-5 sm:space-y-0 sm:space-x-6">
+                    <a href="#experience" class="bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-4 px-10 rounded-full shadow-xl transition duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center text-lg">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.618a1.5 1.5 0 012.121 2.121L15.42 17.5a2 2 0 01-1.414.586H12a2 2 0 01-2-2v-2l-4-4-2.121 2.121"></path></svg>
+                        View Case Studies
+                    </a>
+                    <a href="https://example.com/hasan_mia_sqa_cv.pdf" target="_blank" class="bg-white border-2 border-indigo-700 text-indigo-700 font-bold py-4 px-10 rounded-full shadow-md hover:bg-indigo-50 transition duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center text-lg">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="fade-in-section py-20 md:py-28">
+            <h2 class="text-5xl font-bold text-center text-gray-900 mb-16 relative pb-4">
+                My SQA Philosophy
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-indigo-600 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                
+                <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-yellow-500 text-center transition duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <svg class="w-12 h-12 text-yellow-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.618A1.5 1.5 0 0121 8.25V19a2 2 0 01-2 2H5a2 2 0 01-2-2V8.25a1.5 1.5 0 012.121-1.06l.764.764"></path></svg>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Quality Assurance</h3>
+                    <p class="text-gray-600">
+                        Focusing on process improvement and **defect prevention** throughout the entire Software Development Lifecycle (SDLC).
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-indigo-500 text-center transition duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <svg class="w-12 h-12 text-indigo-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 15h4m-4 0v4m0-4h-4m4 0v-4m-4 4h-4m4 0h-4m0 0V8a4 4 0 014-4h4a4 4 0 014 4v4m-4 0v4a4 4 0 01-4 4H8a4 4 0 01-4-4v-4"></path></svg>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Manual & Exploratory</h3>
+                    <p class="text-gray-600">
+                        Deep dive into user scenarios, executing detailed test cases (Functional, Regression, Usability, UAT).
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-green-500 text-center transition duration-300 hover:shadow-xl hover:scale-[1.02]">
+                    <svg class="w-12 h-12 text-green-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4m-4-4h8m-14 0l-4-4 4-4"></path></svg>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Test Automation</h3>
+                    <p class="text-gray-600">
+                        Developing reliable test scripts to ensure fast, repeatable, and efficient regression testing cycles.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="fade-in-section py-20 md:py-28 bg-white rounded-xl shadow-xl p-8 mt-16 border border-gray-200">
+            <h2 class="text-5xl font-bold text-center text-gray-900 mb-16 relative pb-4">
+                Technical Expertise & Tools
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-indigo-600 rounded-full"></span>
+            </h2>
+            
+            <div class="max-w-6xl mx-auto space-y-12">
+
+                <div>
+                    <h3 class="text-3xl font-bold text-indigo-700 mb-6 border-b pb-2">Core SQA Skills</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-lg font-medium px-4 py-2 rounded-full shadow-md">Test Case Design (ISTQB)</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-lg font-medium px-4 py-2 rounded-full shadow-md">Functional & Non-Functional Testing</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-lg font-medium px-4 py-2 rounded-full shadow-md">SQL for Backend Testing</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-lg font-medium px-4 py-2 rounded-full shadow-md">Agile/Scrum Methodologies</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-lg font-medium px-4 py-2 rounded-full shadow-md">API Testing (Postman)</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-lg font-medium px-4 py-2 rounded-full shadow-md">Performance/Load Testing (JMeter)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-3xl font-bold text-indigo-700 mb-6 border-b pb-2">Tools and Platforms</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                        
+                        <div class="p-4 bg-gray-50 rounded-lg text-center shadow-md transition hover:bg-gray-200">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="JIRA" class="w-10 h-10 mx-auto mb-2">
+                            <p class="font-medium text-gray-700">JIRA</p>
+                            <span class="text-sm text-gray-500">Bug Tracking & Reporting</span>
+                        </div>
+
+                        <div class="p-4 bg-gray-50 rounded-lg text-center shadow-md transition hover:bg-gray-200">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium" class="w-10 h-10 mx-auto mb-2">
+                            <p class="font-medium text-gray-700">Selenium</p>
+                            <span class="text-sm text-gray-500">Web Automation</span>
+                        </div>
+
+                        <div class="p-4 bg-gray-50 rounded-lg text-center shadow-md transition hover:bg-gray-200">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-10 h-10 mx-auto mb-2">
+                            <p class="font-medium text-gray-700">Git/GitHub</p>
+                            <span class="text-sm text-gray-500">Test Code Versioning</span>
+                        </div>
+
+                        <div class="p-4 bg-gray-50 rounded-lg text-center shadow-md transition hover:bg-gray-200">
+                            <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" class="w-10 h-10 mx-auto mb-2">
+                            <p class="font-medium text-gray-700">Postman</p>
+                            <span class="text-sm text-gray-500">API Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="fade-in-section py-20 md:py-28">
+            <h2 class="text-5xl font-bold text-center text-gray-900 mb-16 relative pb-4">
+                Testing Case Studies
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-indigo-600 rounded-full"></span>
+            </h2>
+            <div class="max-w-4xl mx-auto space-y-12">
+                
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-l-8 border-indigo-600 transition duration-300 hover:shadow-indigo-300/50">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-3">E-commerce Checkout Reliability</h3>
+                    <p class="text-sm text-indigo-600 mb-4 font-semibold">Focus: Regression Testing & Security Testing</p>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        Conducted end-to-end regression testing on a complex E-commerce checkout pipeline. Identified and logged **15 critical and major security vulnerabilities** related to payment processing and data validation using XSS and SQL injection test cases.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded">Manual Testing</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded">JIRA</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded">Bug Reporting</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded">Security Testing</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-l-8 border-green-600 transition duration-300 hover:shadow-green-300/50">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-3">Third-Party API Validation</h3>
+                    <p class="text-sm text-green-600 mb-4 font-semibold">Focus: API Testing & Automation Scripting</p>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        Developed and executed **40+ automated API test cases in Postman** for a critical integration service. Ensured 100% data integrity and correct status code responses, reducing manual testing time for API updates by 70%.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded">API Testing</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded">Postman</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded">Automation</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded">Data Validation</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="https://github.com/HasanMia-SQA/test-scripts-repo" target="_blank" class="text-indigo-700 hover:text-indigo-900 font-bold text-xl border-b-2 border-indigo-600 pb-1 hover:pb-2 transition-all duration-300">
+                    View Test Automation Repository →
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in-section py-20 md:py-28">
+            <h2 class="text-5xl font-bold text-center text-gray-900 mb-16 relative pb-4">
+                Let's Connect for Quality
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-indigo-600 rounded-full"></span>
+            </h2>
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-4 border-indigo-600">
+                <p class="text-center text-lg text-gray-600 mb-8">
+                    Looking for a dedicated SQA specialist? Reach out to discuss your quality requirements.
+                </p>
+                <form action="https://formspree.io/f/example-sqa-form-id" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-300">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-300">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-300"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-3 rounded-lg shadow-lg transition duration-300 transform hover:scale-[1.01] flex items-center justify-center">
+                        Send Inquiry
+                    </button>
+                </form>
+
+                <div class="mt-8 text-center space-y-3">
+                    <p class="text-gray-700 font-semibold text-lg">Direct Contact:</p>
+                    <p class="text-indigo-700 text-xl font-medium">Email: <a href="mailto:hasan.mia.sqa@example.com" class="hover:underline">hasan.mia.sqa@example.com</a></p>
+                    <p class="text-gray-600 text-lg">LinkedIn: <a href="https://linkedin.com/in/hasan-mia-sqa" target="_blank" class="text-indigo-700 hover:underline">linkedin.com/in/hasan-mia-sqa</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="current-year"></span> Hasan Mia. Quality is the goal.</p>
+            <p class="text-sm text-gray-400 mt-1">Built by a Quality Assurance Specialist.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Functionality
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Intersection Observer for Scroll Highlighting & Fade-in Animation
+        const sections = document.querySelectorAll('main section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                const link = document.querySelector(`.nav-link[href="#${id}"]`);
+
+                // Fade-in effect
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+
+                // Navbar highlight logic
+                if (link) {
+                    navLinks.forEach(l => l.classList.remove('text-indigo-600', 'font-bold'));
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
+                        link.classList.add('text-indigo-600', 'font-bold');
+                    }
+                }
+            });
+        }, { threshold: 0.2, rootMargin: "0px 0px -60% 0px" });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
